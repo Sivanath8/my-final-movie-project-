@@ -1,0 +1,6 @@
+com\movie\serviceimpl\UsersServiceImpl.class
+com\movie\MovieprojectApplication.class
+com\movie\repository\UsersRepository.class
+com\movie\service\UsersService.class
+com\movie\controller\UserController.class
+com\movie\entity\Users.class

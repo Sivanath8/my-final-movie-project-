@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+	<title>Sdmovies</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<link rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous">
+   		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+	<style type="text/css">
+.header_logo
+{
+ position: absolute;
+	top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 100px;
+    background: #0F1924 no-repeat padding-box;
+    opacity: 1;
+}
+.content_right
+{
+	position: relative;
+	top: 24px;
+    left: 150px;
+	width: 134px;
+	height: 53px;
+	border: 3px solid #FFFFFF;
+	opacity: 1;
+}
+h4
+{
+	color: #FAFAFA;
+	top: 9px;
+    position: relative;
+	text-align: center;
+}
+/*.content_icon1 
+{
+	position: absolute;
+	top: 25px;
+	bottom: 25px;
+	left: 1000px;
+	bottom: 25px;
+	right: 458px;
+	width: 147px;
+    height: 50px;
+	text-align: left;
+	
+	letter-spacing: 0px;
+	font-family: Roboto;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #707070;
+	border-radius: 3px;
+	opacity: 1;
+}*/
+.content_icon1 #first_button
+{
+	position: absolute;
+	top: 25px;
+	bottom: 25px;
+	right: 615px;
+    width: 147px;
+    height: 50px;
+    border: 1px solid #707070;
+    cursor: pointer;
+    background-color: #0F1924; 
+    border: none;
+    font-size: 25px; 
+    color: #FFFFFF;
+}
+.content_icon2
+{
+	position: absolute;
+	top: 25px;
+	bottom: 25px;
+	right: 455px;
+	width: 147px;
+    height: 50px;
+	text-align: left;
+	font-size: 25px;
+	letter-spacing: 0px;
+	font-family: Roboto;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+	border: 1px solid #707070;
+	border-radius: 3px;
+	opacity: 1;
+}
+.content_icon2 #second_button
+{
+   background-color: #FFFFFF;
+   width: 147px;
+   height: 50px;
+   border: 1px solid #707070;
+   cursor: pointer;
+   
+}
+.content_icon3
+{
+  position: absolute;
+	top: 25px;
+	bottom: 25px;
+	right: 255px;
+	width: 147px;
+    height: 50px;
+	text-align: left;
+	font-size: 25px;
+	letter-spacing: 0px;
+	font-family: Roboto;
+    background: #0F1924 0% 0% no-repeat padding-box;
+
+}
+.content_icon3 #third_button
+{
+   color: #F8FCFF;
+   width: 147px;
+   height: 50px;
+   cursor: pointer;
+   background-color:#0F1924 ;
+   border: 1px solid #FFFFFF;
+   border-radius: 1px;
+ 	opacity: 1;
+}
+.container_search
+{
+	position: absolute;
+	top: 130px;
+	left: 408px;
+	width: 908px;
+	height: 50px;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 0px 3px #053B76AD;
+	opacity: 1;
+}
+.container_search i
+{
+	position: absolute;
+	top: 10px;
+	left: 875px;
+	cursor: pointer;	
+}
+.container_search input
+{
+	position: absolute;
+	border: none;
+	cursor: pointer;
+	width: 908px;
+	height: 50px;
+	padding-left: 48px;
+	font-family: Arial;
+	font-size: 16px;
+
+}
+.row2 h3
+{ 
+	position: absolute;
+	top: 207px;
+	left: 140px;
+	width: 127px;
+	height: 33px;
+	text-align: left;
+	font: normal normal bold 30px/34px Arial;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+}
+  .row3
+{
+	position: absolute;
+	top: 256px;
+	left: 140px;
+}
+.first_image img
+{
+	display: block;
+	width: 270px;
+	height: 300px;
+	border-radius: 5px;
+}
+.first_image h6
+{
+	position: absolute;
+    background-color: white;
+    left: 8px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 16px;
+    text-align: center;
+    padding-top: 5px;
+}
+.second_image 
+{
+	position: absolute;
+	left: 310px;
+	top: 0px;
+}
+.second_image img
+{
+	display: block;
+	width: 270px;
+	height: 300px;
+	border-radius: 5px;
+}
+.second_image h6 
+{
+	position: absolute;
+    background-color: white;
+    left: 8px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 16px;
+    text-align: center;
+    padding-top: 5px;
+} 
+.third_image
+{
+	position: absolute;
+	left: 620px;
+	top: 0px;
+}
+.third_image img
+{
+	display: block;
+	width: 270px;
+	height: 300px;
+	border-radius: 5px;
+}
+.third_image h6 
+{
+	position: absolute;
+    background-color: white;
+    left: 8px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 16px;
+    text-align: center;
+    padding-top: 5px;
+} 
+.fourth_image
+{
+	position: absolute;
+	left: 930px;
+	top: 0px;
+}
+.fourth_image img
+{
+	display: block;
+	width: 270px;
+	height: 300px;
+	border-radius: 5px;
+}
+.fourth_image h6 
+{
+	position: absolute;
+    background-color: white;
+    left: 8px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 16px;
+    text-align: center;
+    padding-top: 5px;
+} 
+.fifth_image
+  {
+	position: absolute;
+	left: 1240px;
+	top: 0px;
+  }
+.fifth_image img
+  {
+	display: block;
+	width: 270px;
+	height: 300px;
+	border-radius: 5px;
+  }
+.fifth_image h6 
+  {
+	position: absolute;
+    background-color: white;
+    left: 8px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 16px;
+    text-align: center;
+    padding-top: 5px;
+  } 
+  .row4 span
+ {
+    color:#F26F20;
+    cursor:pointer;
+ }
+ .row4 span:hover
+ {
+   color:black;
+   cursor:pointer;
+ }
+ .row4 i
+ {
+    position: absolute;
+    left: 250px;
+ }
+ .row4
+ {
+    position: absolute;
+    display: flex;
+	top: 568px;
+	left: 140px;
+	width: 77px;
+	height: 26px;
+	text-align: left;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+ }
+.row4 .section_1
+{
+
+}
+ .section_1 .para2
+ {
+    position: absolute;
+    bottom:-2px;
+    left: 222px;
+    color: #6B7E93;
+ }
+ .row4 .section_2
+ {
+    display: flex;
+    position: absolute;
+    top:20px;
+    left: 0px;
+    width: 20px;
+    height: 19px;
+    letter-spacing: 7px; 
+    cursor:pointer; 
+ }
+ .section_3 .para1
+  {
+   position:absolute;
+   left:310px;
+  }
+ .section_3 .para2
+ {
+    position: absolute;
+    bottom:-2px;
+    left: 534px;
+    color: #6B7E93;
+ }
+ .row4 .section_4
+ {
+    display: flex;
+    position: absolute;
+    top:20px;
+    left: 310px;
+    width: 20px;
+    height: 19px;
+    letter-spacing: 7px;  
+ }
+ .section_5 .para1
+  {
+   position:absolute;
+   left:620px;
+  }
+ .section_5 .para2
+ {
+    position: absolute;
+    bottom:-2px;
+    left: 840px;
+    color: #6B7E93;
+ }
+ .row4 .section_6
+ {
+    display: flex;
+    position: absolute;
+    top:20px;
+    left: 620px;
+    width: 20px;
+    height: 19px;
+    letter-spacing: 7px;  
+ }
+ .section_7 .para1
+  {
+   position:absolute;
+   left:930px;
+  }
+ .section_7 .para2
+ {
+    position: absolute;
+    bottom:-2px;
+    left: 1151px;
+    color: #6B7E93;
+ }
+ .row4 .section_8
+ {
+    display: flex;
+    position: absolute;
+    top:20px;
+    left: 930px;
+    width: 20px;
+    height: 19px;
+    letter-spacing: 7px;  
+ }
+ .section_9 .para1
+  {
+   position:absolute;
+   left:1240px;
+  }
+ .section_9 .para2
+ {
+    position: absolute;
+    bottom:-2px;
+    left: 1462px;
+    color: #6B7E93;
+ }
+ .row4 .section_10
+ {
+    display: flex;
+    position: absolute;
+    top:20px;
+    left: 1240px;
+    width: 20px;
+    height: 19px;
+    letter-spacing: 7px;  
+ }
+ .card {
+  border: none;
+  border-radius: 0;
+}
+.carousel-inner {
+  padding: 1em;
+}
+.carousel 
+{
+	 position: relative;
+    top: 700px;
+    width: 85%;
+    left: 116px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-control-prev span,
+.carousel-control-next span {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+@media screen and (min-width: 577px) {
+  .cards-wrapper {
+    display: flex;
+  }
+  .card {
+    margin: 0 0.5em;
+    width: calc(100% / 2);
+  }
+  .image-wrapper {
+    height: 20vw;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .card:not(:first-child) {
+    display: none;
+  }
+}
+.image-wrapper img {
+  display: block;
+	width: 270px;
+	height: 300px;
+	border-radius: 5px;
+}
+.carousel span 
+{
+	color:#F26F20;
+    cursor:pointer;
+}
+.carousel i
+ {
+    position: absolute;
+    left: 250px;
+ }
+ .section_11
+ {
+ 	 top: 300px;
+    position: absolute;
+ }
+  .section_11 .para1
+  {
+   position:absolute;
+   left:0px;
+  }
+ .section_11 .para2
+ {
+    position: absolute;
+    left: 222px;
+    color: #6B7E93;
+ }
+ .carousel .section_12
+ {
+    display: flex;
+    position: absolute;
+    top:320px;
+    width: 20px;
+    height: 19px;
+    letter-spacing: 7px;  
+ }
+ .section_13
+ {
+ 	 top: 300px;
+    position: absolute;
+ }
+ .section_13 .para1
+  {
+   position:absolute;
+   left:0px;
+  }
+ .section_13 .para2
+ {
+    position: absolute;
+    left: 222px;
+    color: #6B7E93;
+ }
+ .carousel .section_14
+ {
+    display: flex;
+    position: absolute;
+    top:320px;
+    width: 20px;
+    height: 19px;
+    letter-spacing: 7px;  
+ }
+ .section_15
+ {
+ 	 top: 300px;
+    position: absolute;
+ }
+ .section_15 .para1
+  {
+   position:absolute;
+   left:0px;
+  }
+ .section_15 .para2
+ {
+    position: absolute;
+    left: 222px;
+    color: #6B7E93;
+ }
+ .carousel .section_16
+ {
+    display: flex;
+    position: absolute;
+    top:320px;
+    width: 20px;
+    height: 19px;
+    letter-spacing: 7px;  
+ }
+ .section_17
+ {
+ 	 top: 300px;
+    position: absolute;
+ }
+ .section_17 .para1
+  {
+   position:absolute;
+   left:0px;
+  }
+ .section_17 .para2
+ {
+    position: absolute;
+    left: 222px;
+    color: #6B7E93;
+ }
+ .carousel .section_18
+ {
+    display: flex;
+    position: absolute;
+    top:320px;
+    width: 20px;
+    height: 19px;
+    letter-spacing: 7px;  
+ }
+ .section_19
+ {
+ 	 top: 300px;
+    position: absolute;
+ }
+ .section_19 .para1
+  {
+   position:absolute;
+   left:0px;
+  }
+ .section_19 .para2
+ {
+    position: absolute;
+    left: 222px;
+    color: #6B7E93;
+ }
+ .carousel .section_20
+ {
+    display: flex;
+    position: absolute;
+    top:320px;
+    width: 20px;
+    height: 19px;
+    letter-spacing: 7px;  
+ }
+ .row5
+ {
+  position: absolute;
+	top: 665px;
+	left: 140px;
+	width: 13%;
+	height: 33px;
+	text-align: left;
+	font: normal normal bold 30px/34px Arial;
+	letter-spacing: 0px;
+	color: #0F1924;
+	opacity: 1;
+ }
+
+ 
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="header">
+				<div class="header_logo">
+					<div class="content_right">
+						<h4>SD Show</h4>
+					</div>
+					<div class="content_icon1">
+						<a href="">
+							<button id="first_button">Admin</button>
+						</a>
+					</div>
+					<div class="content_icon2">
+						<a href="">
+							<button id="second_button">Login</button>
+						</a>
+					</div>
+					<div class="content_icon3">
+						<a href="">
+							<button id="third_button">Register</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row1">
+			<div class="container_search">
+				<input type="text" placeholder="Search Movies, Theaters"> <i
+					class="bi bi-search"></i>
+			</div>
+		</div>
+		<div class="row2">
+			<h3>Trending</h3>
+		</div>
+		<div class="row3">
+			<div class="first_image">
+				<h6>01</h6>
+				<a href="">	
+				   <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images"> 
+				</a> 
+			</div>
+			<div class="second_image">
+				<h6>02</h6>
+				<a href="">
+				<img src="https://i9.behindwoods.com/tamil-movies/ponniyin-selvan-1/thumbnails/related-section-image-ponniyin-selvan-1-7.jpg">
+				</a>
+			</div>
+			<div class="third_image">
+				<h6>03</h6>
+				<a href="">
+				<img src="https://filmyspace.in/wp-content/uploads/2022/01/VIP-300x300.jpeg">
+				</a>
+			</div>
+			<div class="fourth_image">
+				<h6>04</h6>
+				<a href="">
+				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-RUKoV1oFexo%2FUQwmcanVxxI%2FAAAAAAAAMGM%2FgwOG8K6ETqk%2Fs400%2FAyan%2B(2009)%2BHindi%2BDubbed%2BTamil%2BMovie.jpg&f=1&nofb=1&ipt=c090298b621a119af4465c9f2416db5430bb54fb6fe2d310ee4e5c7f4257dfb2&ipo=images">
+				</a>
+			</div>
+			<div class="fifth_image">
+				<h6>05</h6>
+				<a href="">
+				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftotalreporter.com%2Fwp-content%2Fuploads%2F2022%2F06%2FVikram-300x280.jpg&f=1&nofb=1&ipt=b203a2513975e6b34894f494fab9212d6c251536331551280a21008c32adfda5&ipo=images">
+			   </a>
+			 </div>
+		  </div>	  
+		<div class="row4">
+		<div class="section_1">
+		     <h6 class="para1">Theeran</h6>
+		     <h6 class="para2">Action</h6>
+		  </div> 
+		<div class="section_2">
+		  <span id="1" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="2" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="3" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="4" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="5" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="section_3">
+		     <h6 class="para1">PooniyanSelvan </h6>
+		     <h6 class="para2">Action</h6>
+		  </div> 
+		<div class="section_4">
+		  <span id="6" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="7" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="8" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="9" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="10" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <i class="bi bi-plus-circle"></i>
+		  </div>
+		   <div class="section_5">
+		     <h6 class="para1">VIP</h6>
+		     <h6 class="para2">Action</h6>
+		  </div> 
+		<div class="section_6">
+		  <span id="11" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="12" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="13" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="14" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="15" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <i class="bi bi-plus-circle"></i>
+		  </div>
+		   <div class="section_7">
+		     <h6 class="para1">Ayan</h6>
+		     <h6 class="para2">Action</h6>
+		  </div> 
+		<div class="section_8">
+		  <span id="16" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="17" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="18" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="19" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="20" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <i class="bi bi-plus-circle"></i>
+		  </div>
+		  <div class="section_9">
+		     <h6 class="para1">Vikkiram</h6>
+		     <h6 class="para2">Action</h6>
+		  </div> 
+		<div class="section_10">
+		  <span id="21" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="22" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="23" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="24" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <span id="25" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		  <i class="bi bi-plus-circle"></i>
+		  </div> 
+	    </div>	  
+   </div>
+   <div class="row5">
+			<h3><b>Top 10 MovieList</b></h3>
+		</div>
+   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+           <div class="carousel-item active">
+             <div class="cards-wrapper">
+              <div class="card">
+               <div class="image-wrapper">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images" alt="...">
+             <div class="section_11">
+		     <h6 class="para1">Theeran</h6>
+		     <h6 class="para2">Action</h6>
+		       </div> 
+		    <div class="section_12">
+		      <span id="1" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="2" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="3" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="4" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="5" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <i class="bi bi-plus-circle"></i>
+		    </div>
+         </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images" alt="...">
+             <div class="section_13">
+		     <h6 class="para1">Theeran</h6>
+		     <h6 class="para2">Action</h6>
+		       </div> 
+		    <div class="section_14">
+		      <span id="1" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="2" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="3" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="4" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="5" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <i class="bi bi-plus-circle"></i>
+		    </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images" alt="...">
+            <div class="section_15">
+		     <h6 class="para1">Theeran</h6>
+		     <h6 class="para2">Action</h6>
+		       </div> 
+		    <div class="section_16">
+		      <span id="1" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="2" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="3" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="4" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="5" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <i class="bi bi-plus-circle"></i>
+		    </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images" alt="...">
+            <div class="section_17">
+		     <h6 class="para1">Theeran</h6>
+		     <h6 class="para2">Action</h6>
+		       </div> 
+		    <div class="section_18">
+		      <span id="1" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="2" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="3" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="4" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="5" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <i class="bi bi-plus-circle"></i>
+		    </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images" alt="...">
+            <div class="section_19">
+		     <h6 class="para1">Theeran</h6>
+		     <h6 class="para2">Action</h6>
+		       </div> 
+		    <div class="section_20">
+		      <span id="1" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="2" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="3" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="4" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <span id="5" onclick=functionFillingUnfilling(this.id) class="bi bi-star"></span>
+		      <i class="bi bi-plus-circle"></i>
+		    </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+      	<div class="card">
+          <div class="image-wrapper">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images" alt="...">
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images" alt="...">
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+          	<div class="myimage">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images" alt="...">
+           </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images" alt="...">
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftnhits.xyz%2Fimgfiles%2FTheeran%2520Adhigaram%2520Ondru-2017.jpg&f=1&nofb=1&ipt=3dc526ef5d194a1b4cc9578159065de5d19005298bd8b6b8e3be9a9387d39620&ipo=images" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+	     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
+          </script> 
+         <script type="text/javascript">
+            function functionFillingUnfilling(paraid)
+            {
+            	if($("#"+paraid).hasClass("bi-star"))
+            
+            	{
+            		 $("#"+paraid).removeClass("bi-star");
+            	      $("#"+paraid).addClass("bi-star-fill");
+            		}
+            	else
+            		{
+            		   $("#"+paraid).removeClass("bi-star-fill");
+          	           $("#"+paraid).addClass("bi-star");
+            		}
+            }
+         </script>
+  </body>
+	</html>
